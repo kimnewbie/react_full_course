@@ -1,27 +1,41 @@
 import React, { Component } from 'react';
 import ReactDOM from 'react-dom/client';
 import './styles/styles.css'
+
 import Header from './components/header';
 import NewsList from './components/news_list';
+import Footer from './components/footer';
 import JSON from './db.json';
 
+
 class App extends Component {
+
     state = {
-        news: JSON
+        news: JSON,
+        footerText: 'I am a happy footer'
     }
 
-    // return React.createElement('h1', { className: 'Title' }, 'Hello World!');
+
     render() {
         return (
             <div className="hey">
                 <Header />
                 <NewsList
                     news={this.state.news}
+                >
+                    <br />
+                    <h1>I am a children</h1>
+                </NewsList>
+
+
+                <Footer
+                    footerText={this.state.footerText}
                 />
             </div>
         )
     }
-};
+}
+
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
-root.render(<App />); // component 타입으로 넘김   
+root.render(<App />)
