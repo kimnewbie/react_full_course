@@ -26,7 +26,7 @@ class Header extends Component {
     render() {
         return (
             <>
-                {/* <header style={{background:`${this.state.active ? 'red':'blue'}`}}></header> */}
+                {/* <header style={{background:`${this.state.active ? 'red':'blue'}`}}></header> */}{/* 퓨어 자바스크립트 문법 */}
                 <header className={this.state.active ? 'active' : 'non-active'}>
                     <div className="logo">Code news</div>
                     <input onChange={(e) => this.inputChange(e)} />
